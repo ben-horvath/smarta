@@ -28,5 +28,12 @@
         components: {
             AppLayout,
         },
+
+        mounted() {
+            axios.get('/tasks')
+            .then((response) => {
+                console.log(response)
+            })
+        },
     }
 </script>
